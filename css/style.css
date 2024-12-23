@@ -406,6 +406,10 @@ main .bannerImg-carrier .bannerImg {
     .blank-dashboard .dashboard-body>* {
         width: 100% !important;
     }
+
+    .blank-dashboard .dashboard-body .dashboard-text-editor textarea {
+        height: 200px;
+    }
 }
 
 @media (min-width:400px) and (max-width:900px) {
