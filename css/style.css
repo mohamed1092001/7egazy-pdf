@@ -1,0 +1,415 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Red Hat Display", serif;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #555;
+    border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    background-color: #202020;
+}
+
+.btns-container {
+    position: absolute;
+    top: 103%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+}
+
+.btns-container button {
+    background-color: #000;
+    color: #ccc;
+    text-transform: uppercase;
+    padding: 5px 0px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.btns-container button.back-btn:hover {
+    background-color: #333;
+}
+
+.btns-container button.cancel-btn:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+
+
+
+/* ################################# */
+
+main {
+    min-height: 100vh;
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    padding: 0px 5%;
+    position: relative;
+}
+
+main nav {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    color: #ccc;
+    padding: 7px 5%;
+    box-shadow: 0px 0px 9px #111111;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+main nav a {
+    color: #eee;
+    text-decoration: underline;
+}
+
+main nav .date-time {
+    display: flex;
+    gap: 30px;
+}
+
+main nav .date-time i {
+    margin-right: 7px;
+}
+
+main .bannerText-container {
+    width: 45%;
+}
+
+main .bannerText-container h1 {
+    color: #ddd;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+main .bannerText-container p {
+    font-size: 17px;
+    width: 80%;
+    margin: 20px 0px;
+    color: #ccc;
+}
+
+main .bannerText-container .start-btn {
+    background-color: #f0f0f0;
+    color: #000;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 4px 20px;
+    cursor: pointer;
+}
+
+main .bannerText-container .start-btn:hover {
+    background-color: #fff;
+}
+
+main .bannerImg-carrier {
+    width: 55%;
+    font-family: "Red Hat Display", serif;
+}
+
+main .bannerImg-carrier .bannerImg {
+    width: 100%;
+    filter: drop-shadow(0px 0px 30px #000);
+    display: block;
+}
+
+/* choose */
+
+.choose-model-carrier {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000004d;
+    backdrop-filter: blur(6px);
+    z-index: 2;
+    display: none;
+}
+
+.choose-model-carrier .choose-model {
+    width: 670px;
+    background-color: #191b1a;
+    background-color: #202020;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    border: solid 1px #dddddd3d;
+    box-shadow:
+        0px 0px 5px rgba(0, 0, 0, 0.3),
+        0px 0px 15px rgba(0, 0, 0, 0.2),
+        0px 0px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px 0px;
+}
+
+.choose-model-carrier .choose-model .line {
+    width: 3px;
+    height: 250px;
+    border-radius: 50px;
+    background-color: #666;
+}
+
+.choose-model-carrier .choose-model .blank,
+.choose-model-carrier .choose-model .title-text {
+    width: 40%;
+    text-align: center;
+    height: 350px;
+    padding: 20px;
+    border: solid 1px transparent;
+    padding-bottom: 0%;
+    cursor: pointer;
+}
+
+.choose-model-carrier .choose-model .blank:hover,
+.choose-model-carrier .choose-model .title-text:hover {
+    border: solid 1px #666;
+    background-color: #333;
+}
+
+.choose-model-carrier .choose-model .blank .sheet,
+.choose-model-carrier .choose-model .title-text .sheet {
+    width: 100%;
+    height: 90%;
+    box-shadow: 0px 0px 5px #000;
+    border-radius: 8px;
+    background-color: #191b1a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.choose-model-carrier .choose-model .blank .sheet .part,
+.choose-model-carrier .choose-model .title-text .sheet .part {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.choose-model-carrier .choose-model .blank .sheet-type,
+.choose-model-carrier .choose-model .title-text .sheet-type {
+    color: #f0f0f0;
+    text-transform: uppercase;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1.5px;
+}
+
+.choose-model-carrier .choose-model .title-text .sheet .title-line {
+    height: 5px;
+    width: 30%;
+    background-color: #000;
+}
+
+.choose-model-carrier .choose-model .title-text .sheet .paragraph {
+    height: 20px;
+    background-color: #000;
+}
+
+
+
+/* blank-dashboard */
+
+.blank-dashboard {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: #111111;
+    display: none;
+}
+
+.blank-dashboard .dashboard-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.blank-dashboard .dashboard-body .dashboard-text-editor {
+    width: 35%;
+    padding: 20px;
+    background-color: #202020;
+    border-radius: 8px;
+}
+
+.blank-dashboard .dashboard-body .dashboard-text-editor textarea {
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #111111;
+    box-shadow: 0px 0px 7px 3px #000000d8;
+    resize: none;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.blank-dashboard .dashboard-body .dashboard-text-editor textarea::placeholder {
+    text-transform: capitalize;
+}
+
+.text-editor-btn {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.text-editor-btn button {
+    width: calc((100% - 20px) / 3);
+    padding: 7px 0px;
+    background-color: #ccc;
+    color: #222;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.text-editor-btn button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.text-editor-btn .cancel-btn:hover {
+    background-color: #ff0000;
+}
+
+/* ####### */
+
+.dashboard-text-view {
+    width: 60%;
+    height: 100%;
+    background-color: #202020;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.dashboard-text-view .paper {}
+
+.dashboard-text-view .paper .text {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #111111;
+    box-shadow: 0px 0px 7px 3px #000000d8;
+    resize: none;
+    font-size: 16px;
+    white-space: pre-wrap;
+    color: #ccc;
+}
+
+
+.dashboard-text-view .paper .remove-btn {
+    background-color: tomato;
+    color: #fff;
+    padding: 5px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+/* #############################3 */
+
+/* resbonsive */
+
+@media (min-width:0px) and (max-width:900px) {
+    main .bannerImg-carrier {
+        display: none;
+    }
+
+    main .bannerText-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    main .bannerText-container p {
+        margin: 20px auto;
+    }
+
+    main nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main nav .date-time {
+        justify-content: space-between;
+    }
+
+    .choose-model-carrier .choose-model {
+        width: 90%;
+    }
+
+    .choose-model-carrier .choose-model .title-text {
+        display: none;
+    }
+
+    .choose-model-carrier .choose-model .line {
+        display: none;
+    }
+
+    .choose-model-carrier .choose-model .blank {
+        width: 90%;
+    }
+
+    .blank-dashboard .dashboard-body {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .blank-dashboard .dashboard-body>* {
+        width: 100% !important;
+    }
+}
+
+@media (min-width:400px) and (max-width:900px) {
+    .choose-model-carrier .choose-model {
+        width: 300px !important;
+    }
+}

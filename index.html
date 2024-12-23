@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hegazy-PDF-Maker</title>
+
+    <!-- page icon -->
+    <link rel="icon" href="imgs/icon.png">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <main>
+        <nav>
+            <p class="powered">powered by <a href="https://mohamed-hossam.vercel.app/">mohamed hossam</a></p>
+            <div class="date-time">
+                <div class="date">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span class="dd">23</span> . <span class="mm">12</span> . <span class="yyyy">2024</span>
+                </div>
+                <div class="time">
+                    <i class="fa-solid fa-clock"></i>
+                    <span class="hh">01</span> : <span class="min">11</span> : <span class="sec">11</span> <span
+                        class="part-day">AM</span>
+                </div>
+            </div>
+        </nav>
+        <div class="bannerText-container">
+            <h1 class="title">7egazy<span><i class="fa-solid fa-feather-pointed"></i></span>pdf</h1>
+            <p class="description">you can quickly turn textual content into a PDF document, helping you get print-ready
+                files with high quality.</p>
+            <button class="start-btn"><i class="fa-regular fa-pen-to-square"></i> start now</button>
+        </div>
+        <div class="bannerImg-carrier">
+            <img src="imgs/banner.png" class="bannerImg">
+        </div>
+    </main>
+
+
+    <!-- choose -->
+
+    <section class="choose-model-carrier">
+        <div class="choose-model">
+            <div class="blank">
+                <div class="sheet"> </div>
+                <p class="sheet-type">blank</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="title-text">
+                <div class="sheet">
+                    <div class="part">
+                        <div class="title-line"></div>
+                        <div class="paragraph"></div>
+                    </div>
+                    <div class="part">
+                        <div class="title-line"></div>
+                        <div class="paragraph"></div>
+                    </div>
+                    <div class="part">
+                        <div class="title-line"></div>
+                        <div class="paragraph"></div>
+                    </div>
+                    <div class="part">
+                        <div class="title-line"></div>
+                        <div class="paragraph"></div>
+                    </div>
+                    <div class="part">
+                        <div class="title-line"></div>
+                        <div class="paragraph"></div>
+                    </div>
+                    <div class="part">
+                        <div class="title-line"></div>
+                        <div class="paragraph"></div>
+                    </div>
+                    <div class="part">
+                        <div class="title-line"></div>
+                        <div class="paragraph"></div>
+                    </div>
+                </div>
+                <p class="sheet-type">title + text</p>
+            </div>
+
+            <div class="btns-container">
+                <button class="cancel-btn"><i class="fa-solid fa-xmark"></i> cancel</button>
+                <button class="back-btn"><span>back</span> <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- blank dashboard -->
+
+    <section class="blank-dashboard">
+        <div class="dashboard-body">
+            <div class="dashboard-text-editor">
+                <textarea class="text-editor" placeholder="write your text here ...."></textarea>
+                <div class="text-editor-btn">
+                    <button class="cancel-btn"><span>cancel</span> <i class="fa-solid fa-xmark"></i></button>
+                    <button class="add-btn"><span>add sheet</span> <i class="fa-solid fa-plus"></i></button>
+                    <button class="print-btn"><span>print</span> <i class="fa-solid fa-print"></i></button>
+                </div>
+            </div>
+            <div class="dashboard-text-view">
+                
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
