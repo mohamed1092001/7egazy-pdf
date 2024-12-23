@@ -89,64 +89,22 @@ $('.blank-dashboard .text-editor-btn .add-btn').on('click', function () {
 
 
 // make blank pdf
-
-// document.querySelector('.blank-dashboard .dashboard-body .dashboard-text-editor .print-btn').addEventListener('click', async function () {
-//     const { jsPDF } = window.jspdf;
-//     const pdf = new jsPDF();
-
-//     const texts = document.querySelectorAll('.dashboard-text-view .text');
-
-//     texts.forEach((textElement, index) => {
-//         const text = textElement.textContent;
-
-//         // تقسيم النص إلى أسطر
-//         const lines = text.split('\n').map(line => line.trim()).filter(line => line);
-
-//         let cursorY = 20; // بداية النص على الصفحة
-//         lines.forEach(line => {
-//             let formattedLines = []; // الأسطر الناتجة عن كسر النص الطويل
-
-//             if (line.startsWith('### ')) { // العناوين الرئيسية
-//                 pdf.setFontSize(16);
-//                 pdf.setFont('helvetica', 'bold');
-//                 formattedLines = pdf.splitTextToSize(line.replace('### ', ''), 180);
-//             } else if (line.startsWith('- ')) { // النقاط الفرعية
-//                 pdf.setFontSize(12);
-//                 pdf.setFont('helvetica', 'normal');
-//                 formattedLines = pdf.splitTextToSize(line.replace('- ', '• '), 170); // عرض أقل للنقاط
-//             } else { // النصوص العادية
-//                 pdf.setFontSize(12);
-//                 pdf.setFont('helvetica', 'normal');
-//                 formattedLines = pdf.splitTextToSize(line, 180);
-//             }
-
-//             // طباعة كل خط في النص الناتج
-//             formattedLines.forEach(subLine => {
-//                 if (cursorY > pdf.internal.pageSize.height - 20) { // إضافة صفحة جديدة لو امتلأت الصفحة
-//                     pdf.addPage();
-//                     cursorY = 20;
-//                 }
-//                 pdf.text(subLine, 10, cursorY);
-//                 cursorY += 8; // تباعد بين الأسطر
-//             });
-//         });
-
-//         // إضافة صفحة جديدة للنص التالي إلا إذا كان الأخير
-//         if (index !== texts.length - 1) {
-//             pdf.addPage();
-//         }
-//     });
-
-//     // تنزيل ملف PDF
-//     pdf.save('dashboard-texts.pdf');
-// });
-
 document.querySelector('.blank-dashboard .dashboard-body .dashboard-text-editor .print-btn').addEventListener('click', async function () {
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF();
 
     const texts = document.querySelectorAll('.dashboard-text-view .text');
     let pageNumber = 1; // متغير لتعداد الصفحات
+
+    // استخراج التاريخ الحالي كاسم للـ PDF
+    const currentDate = new Date();
+    const formattedDate = currentDate.toISOString().split('T')[0]; // التاريخ بصيغة YYYY-MM-DD
+
+    // يمكن استخدام جزء من النص كمسمى للملف، مثل أول عنوان في النصوص
+    const firstHeading = texts.length > 0 ? texts[0].textContent.split('\n')[0] : 'Document';
+
+    // دمج التاريخ مع العنوان الأول في اسم الملف
+    const fileName = `${firstHeading}-${formattedDate}.pdf`;
 
     texts.forEach((textElement, index) => {
         const text = textElement.textContent;
@@ -240,10 +198,9 @@ document.querySelector('.blank-dashboard .dashboard-body .dashboard-text-editor 
         pdf.text('Coded by Mohamed Hossam', 10, pdf.internal.pageSize.height - 10);
     }
 
-    // تنزيل ملف PDF
-    pdf.save('timeline-events.pdf');
+    // تنزيل ملف PDF بالاسم الديناميكي
+    pdf.save("7egazy-pdf"+fileName); // حفظ الملف بالاسم الجديد
 });
-
 
 
 // remove paper
